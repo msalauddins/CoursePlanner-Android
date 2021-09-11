@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:key="pref_theme"
+        android:title="Theme Color"
+        android:dialogTitle="Select your favourite theme color"
+        android:summary="Select your favourite theme color"
+        android:entries="@array/theme_colors"
+        android:entryValues="@array/theme_colors"
+        android:defaultValue="Blue"/>
+
+    <PreferenceCategory
+        android:title="STORAGE">
+
+        <CheckBoxPreference
+            android:key="sync_pref"
+            android:title="@string/sync_pref"
+            android:summary="@string/sync_pref_summary"
+            android:defaultValue="true"/>
+
+        <SwitchPreference
+            android:key="switch"
+            android:summaryOff="Switch off"
+            android:summaryOn="Switch on"
+            android:title="Switch Preference"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

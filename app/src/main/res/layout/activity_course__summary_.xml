@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="5dp"
+    tools:context=".area.CourseDetailsActivity">
+
+    <include
+        layout="@layout/toolbar_layout"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:id="@+id/course_summary_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/select_origin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/search_origin_hint"
+                    android:background="@drawable/origin_border"/>
+
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="170dp"
+                    android:src="@drawable/origin"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/course_summary_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+
+                <TextView
+                    android:id="@+id/select_destination"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/search_destination_hint"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/origin_border"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/continue_btn"
+        android:text="@string/continue_button_string"
+        android:textSize="14sp"
+        android:background="#FFB74D"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
